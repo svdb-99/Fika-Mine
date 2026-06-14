@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupcake Collection | Mine's Kitchen</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --cream-bg: #fdfaf5;
+            --parchment: #f6f1eb;
+            --maroon: #4a0404;
+            --text-brown: #3d2b1f;
+            --gold-accent: #b58d67;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cream-bg);
+            color: var(--text-brown);
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: var(--cream-bg);
+        }
+
+        .logo {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: var(--text-brown);
+        }
+
+        .back-link {
+            color: var(--maroon);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            color: var(--gold-accent);
+        }
+
+        .cupcake-gallery {
+            background: var(--parchment);
+            padding: 60px 5% 80px;
+            text-align: center;
+        }
+
+        .cupcake-gallery h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--maroon);
+            margin-bottom: 8px;
+        }
+
+        .cupcake-gallery .subtitle {
+            color: var(--gold-accent);
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+
+        .cupcake-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cupcake-card {
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 1 / 1;
+        }
+
+        .cupcake-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        .cupcake-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        footer {
+            background: var(--maroon);
+            color: white;
+            text-align: center;
+            padding: 30px 8%;
+            font-size: 0.75rem;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .cupcake-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .cupcake-gallery h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><a href="ai_studio_code.html">MINE'S KITCHEN<br><small>— BAKED WITH LOVE —</small></a></div>
+        <a href="ai_studio_code.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to home</a>
+    </nav>
+
+    <section class="cupcake-gallery">
+        <h1>Cupcake Collection</h1>
+        <p class="subtitle">Sweet little treats baked with love</p>
+        <div class="cupcake-grid">
+            <div class="cupcake-card"><img src="public/cupcakes/IMG-20260528-WA0032.jpg" alt="Cupcake" loading="lazy"></div>
+            <div class="cupcake-card"><img src="public/cupcakes/IMG-20260528-WA0034.jpg" alt="Cupcake" loading="lazy"></div>
+            <div class="cupcake-card"><img src="public/cupcakes/IMG-20260528-WA0037.jpg" alt="Cupcake" loading="lazy"></div>
+            <div class="cupcake-card"><img src="public/cupcakes/IMG-20260604-WA0016.jpg" alt="Cupcake" loading="lazy"></div>
+            <div class="cupcake-card"><img src="public/cupcakes/IMG-20260604-WA0017.jpg" alt="Cupcake" loading="lazy"></div>
+            <div class="cupcake-card"><img src="public/cupcakes/IMG-20260604-WA0018.jpg" alt="Cupcake" loading="lazy"></div>
+            <div class="cupcake-card"><img src="public/cupcakes/IMG-20260604-WA0019.jpg" alt="Cupcake" loading="lazy"></div>
+            <div class="cupcake-card"><img src="public/cupcakes/IMG-20260604-WA0020.jpg" alt="Cupcake" loading="lazy"></div>
+            <div class="cupcake-card"><img src="public/cupcakes/IMG-20260604-WA0021.jpg" alt="Cupcake" loading="lazy"></div>
+            <div class="cupcake-card"><img src="public/cupcakes/IMG-20260604-WA0022.jpg" alt="Cupcake" loading="lazy"></div>
+            <div class="cupcake-card"><img src="public/cupcakes/IMG-20260604-WA0023.jpg" alt="Cupcake" loading="lazy"></div>
+            <div class="cupcake-card"><img src="public/cupcakes/IMG-20260606-WA0008.jpg" alt="Cupcake" loading="lazy"></div>
+            <div class="cupcake-card"><img src="public/cupcakes/IMG-20260606-WA0010.jpg" alt="Cupcake" loading="lazy"></div>
+            <div class="cupcake-card"><img src="public/cupcakes/IMG-20260606-WA0013.jpg" alt="Cupcake" loading="lazy"></div>
+            <div class="cupcake-card"><img src="public/cupcakes/IMG-20260606-WA0016.jpg" alt="Cupcake" loading="lazy"></div>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Mine's Kitchen (Fika) | Baked with love ❤️
+    </footer>
+
+</body>
+</html>

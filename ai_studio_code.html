@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine's Kitchen | Baked With Love</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <!-- Icons for Footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* CSS VARIABLES - THE COLOR PALETTE */
+        :root {
+            --cream-bg: #fdfaf5;
+            --parchment: #f6f1eb;
+            --maroon: #4a0404;
+            --text-brown: #3d2b1f;
+            --gold-accent: #b58d67;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cream-bg);
+            color: var(--text-brown);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: var(--cream-bg);
+        }
+
+        .logo {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        /* Nav links styled as subtle buttons */
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-brown);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            padding: 8px 15px;
+            border: 1px solid transparent;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            border: 1px solid var(--gold-accent);
+            color: var(--maroon);
+        }
+
+        .order-now-btn {
+            background: var(--maroon);
+            color: white !important;
+            padding: 10px 20px !important;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 0.8rem;
+            border-radius: 2px;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 60px 8%;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .made-with-love {
+            font-family: 'Dancing Script', cursive;
+            color: var(--maroon);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background: var(--maroon);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: var(--transition);
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            background: #610505;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        /* IMAGE HOVER ANIMATION */
+        .hover-img {
+            width: 100%;
+            border-radius: 5px;
+            transition: var(--transition); /* Smooth movement and return */
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hover-img:hover {
+            transform: translateY(-15px) scale(1.02); /* Moves up and grows slightly */
+        }
+
+        /* --- FIKA SECTION --- */
+        .fika-section {
+            display: flex;
+            padding: 80px 8%;
+            background: var(--parchment);
+            align-items: center;
+            gap: 40px;
+        }
+
+        .fika-definition {
+            flex: 1;
+            border: 1px solid var(--gold-accent);
+            padding: 40px;
+            text-align: center;
+            background: white;
+            position: relative;
+        }
+
+        .fika-definition h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+        }
+
+        /* --- OUR TREATS (Maroon Section) --- */
+        .treats-section {
+            background: var(--maroon);
+            padding: 80px 8%;
+            text-align: center;
+            color: white;
+        }
+
+        .treats-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .treat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .treat-card {
+            background: var(--parchment);
+            padding: 15px;
+            color: var(--text-brown);
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        a.treat-card {
+            text-decoration: none;
+            display: block;
+            color: var(--text-brown);
+        }
+
+        a.treat-card:hover {
+            color: var(--text-brown);
+        }
+
+        .treat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .treat-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .view-menu-btn {
+            color: var(--maroon);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.8rem;
+            display: block;
+            margin-top: 15px;
+        }
+
+        /* --- ICON SECTION --- */
+        .why-choose {
+            padding: 80px 8%;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .icon-box {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .icon-box i {
+            font-size: 2.5rem;
+            color: var(--gold-accent);
+            margin-bottom: 15px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--maroon);
+            color: white;
+            padding: 60px 8% 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+        }
+
+        .footer-col p, .footer-col div {
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        .social-icons a {
+            color: white;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .copyright {
+            grid-column: span 2;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.7rem;
+            opacity: 0.5;
+        }
+
+        /* Responsive for mobile */
+        @media (max-width: 768px) {
+            .hero, .fika-section, .treat-grid, .why-choose, footer {
+                flex-direction: column;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav>
+        <div class="logo">MINE'S KITCHEN<br><small>— BAKED WITH LOVE —</small></div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Good treats.<br>Beautiful moments.</h1>
+            <div class="made-with-love">Made with love ❤️</div>
+            <p>Homemade cakes and pastries baked fresh with care, quality ingredients, and a touch of magic.</p>
+            <!-- WhatsApp Button Integration -->
+            <a href="https://wa.me/27609704672?text=Hello! I would like to order a cake." class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> WhatsApp Me
+            </a>
+        </div>
+        <div class="hero-image">
+            <img src="public/cake/heart.jpg" alt="Main Cake" class="hover-img">
+        </div>
+    </section>
+
+    <!-- Fika Definition Section -->
+    <section class="fika-section">
+        <div class="fika-definition">
+            <h2>Fika</h2>
+            <p><i>[fi:ka] noun</i></p>
+            <hr style="width: 50px; margin: 20px auto; border-color: var(--gold-accent);">
+            <p>To enjoy coffee and pastries with friends; taking time to savour the moment.</p>
+        </div>
+        <div style="flex: 1.2;">
+            <h3 style="font-family: 'Playfair Display'; font-size: 1.8rem;">Baked with love, made for you.</h3>
+            <p>At Fika, every cake, pastry, and sweet delight is homemade with care and a touch of magic. From beautifully decorated cakes to everyday pastries.</p>
+            <img src="public/cupcakes/front.jpg" alt="Chocolate Cake" class="hover-img" style="margin-top: 20px; height: 300px; object-fit: cover;">
+        </div>
+    </section>
+
+    <!-- Treats Section -->
+    <section class="treats-section" id="treats">
+        <h2>Our Treats</h2>
+        <div class="treat-grid">
+            <a href="cakes.html" class="treat-card">
+                <img src="public/cake/cover.jpg" alt="Cakes" class="hover-img">
+                <h3>Custom Cakes</h3>
+                <p>Made for your special moments.</p>
+                <span class="view-menu-btn">VIEW ALL <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="cupcakes.html" class="treat-card">
+                <img src="public/cupcakes/cover.jpg" alt="Cupcakes" class="hover-img">
+                <h3>Cupcakes</h3>
+                <p>Sweet little treats made with love.</p>
+                <span class="view-menu-btn">VIEW ALL <i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose">
+        <div class="icon-box">
+            <i class="fas fa-blender"></i>
+            <h4>HOMEMADE</h4>
+            <p>Made from scratch with love.</p>
+        </div>
+        <div class="icon-box">
+            <i class="fas fa-leaf"></i>
+            <h4>QUALITY</h4>
+            <p>Only the best ingredients.</p>
+        </div>
+        <div class="icon-box">
+            <i class="fas fa-heart"></i>
+            <h4>MADE WITH LOVE</h4>
+            <p>Every treat is baked with care.</p>
+        </div>
+        <div class="icon-box">
+            <i class="fas fa-birthday-cake"></i>
+            <h4>EVERY MOMENT</h4>
+            <p>For celebrations or coffee dates.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-phone"></i> +27 60 970 4672</p>
+            <p><i class="fas fa-envelope"></i> fikaest26@outlook.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Follow Along</h4>
+            <p>Stay updated with our latest bakes and sweet moments.</p>
+            <a href="#" class="order-now-btn" style="background: transparent; border: 1px solid white;">FOLLOW US ❤️</a>
+        </div>
+        <div class="copyright">
+            © 2026 Mine's Kitchen (Fika) | Baked with love ❤️
+        </div>
+    </footer>
+
+</body>
+</html>
